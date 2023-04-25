@@ -20,7 +20,7 @@ import com.example.demo.model.User;
 import io.swagger.v3.oas.annotations.parameters.RequestBody;
 
 @RestController
-public class RestApiController {
+public class UserController {
 
     UserManager userManager;
 
