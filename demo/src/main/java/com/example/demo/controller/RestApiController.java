@@ -24,7 +24,7 @@ public class RestApiController {
 
     UserManager userManager;
 
-    @PostMapping("/user")
+    @PostMapping("/users")
     public ResponseEntity<User> createUser(@RequestBody User input) {
         try {
             User user = userManager.save(new User(input.getName(), input.getAge()));
@@ -34,7 +34,7 @@ public class RestApiController {
         }
     }
 
-    @PutMapping("/user/{id}")
+    @PutMapping("/users/{id}")
     public ResponseEntity<User> updateUser(@PathVariable("id") Long id, @RequestBody User input) {
         try {
             Optional<User> existingUser = userManager.findById(id);
@@ -51,7 +51,7 @@ public class RestApiController {
         }
     }
 
-    @GetMapping("/user")
+    @GetMapping("/users")
     public ResponseEntity<List<User>> getAllUser(@RequestParam String name) {
         try {
             List<User> users = new ArrayList<User>();
@@ -71,7 +71,7 @@ public class RestApiController {
         }
     }
 
-    @GetMapping("/user{id}")
+    @GetMapping("/users{id}")
     public ResponseEntity<User> getUserById(@PathVariable("id") Long id) {
 		Optional<User> user = userManager.findById(id);
 
@@ -82,7 +82,7 @@ public class RestApiController {
 		}
     }
 
-    @DeleteMapping("/user{id}")
+    @DeleteMapping("/users{id}")
     public ResponseEntity<HttpStatus> deleteUser(@PathVariable("id") Long id) {
         try {
             userManager.deleteById(id);
