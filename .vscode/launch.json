@@ -1,0 +1,14 @@
+{
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Spring Boot-DistributedSystemsLabApplication<DistributedSystems>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "mainClass": "de.esslingen.DistributedSystems.DistributedSystemsLabApplication",
+            "projectName": "DistributedSystems",
+            "args": "",
+            "envFile": "${workspaceFolder}/.env"
+        }
+    ]
+}
