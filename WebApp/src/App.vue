@@ -1,10 +1,10 @@
 <template>
   <div id="app">
-    <nav class="navbar navbar-expand navbar-dark bg-dark">
-      <router-link to="/" class="navbar-brand">Phileas Roth</router-link>
+    <nav class="navbar navbar-expand navbar-blue bg-dark">
+      <router-link to="/" class="navbar-brand">Phileas Roth Blog</router-link>
       <div class="navbar-nav mr-auto">
         <li class="nav-item">
-          <router-link to="/posts" class="nav-link">Posts</router-link>
+          <router-link to="/posts" class="nav-link">Blog</router-link>
         </li>
         <li class="nav-item">
           <router-link to="/add" class="nav-link">Add</router-link>
