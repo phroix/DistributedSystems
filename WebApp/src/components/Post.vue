@@ -12,12 +12,12 @@
         />
       </div>
       <div class="form-group">
-        <label for="description">Description</label>
+        <label for="post">Post</label>
         <input
           type="text"
           class="form-control"
-          id="description"
-          v-model="currentPost.description"
+          id="post"
+          v-model="currentPost.post"
         />
       </div>
     </form>

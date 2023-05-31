@@ -63,7 +63,7 @@ public class PostController {
     @PostMapping("/posts")
     public ResponseEntity<Post> createPost(@RequestBody Post post) {
         try {
-            Post newPost = postRepository.save(new Post(post.getName(), post.getDescription()));
+            Post newPost = postRepository.save(new Post(post.getName(), post.getPost()));
             return new ResponseEntity<>(newPost, HttpStatus.CREATED);
         } catch (Exception e) {
             return new ResponseEntity<>(null, HttpStatus.INTERNAL_SERVER_ERROR);
@@ -77,7 +77,7 @@ public class PostController {
         if (postData.isPresent()) {
             Post newPost = postData.get();
             newPost.setName(post.getName());
-            newPost.setDescription(post.getDescription());
+            newPost.setPost(post.getPost());
             return new ResponseEntity<>(postRepository.save(newPost), HttpStatus.OK);
         } else {
             return new ResponseEntity<>(HttpStatus.NOT_FOUND);

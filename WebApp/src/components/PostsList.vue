@@ -44,8 +44,8 @@
           <label><strong>Name:</strong></label> {{ currentPost.name }}
         </div>
         <div>
-          <label><strong>Description:</strong></label>
-          {{ currentPost.description }}
+          <label><strong>Post:</strong></label>
+          {{ currentPost.post }}
         </div>
 
         <router-link

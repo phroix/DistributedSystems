@@ -26,12 +26,12 @@ public class Post {
     @Column(name = "name")
     private String name;
 
-    @Column(name = "description")
-    private String description;
+    @Column(name = "post")
+    private String post;
 
-    public Post(String name, String description) {
+    public Post(String name, String post) {
         this.name = name;
-        this.description = description;
+        this.post = post;
     }
 
     
