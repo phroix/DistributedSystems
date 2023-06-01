@@ -1,17 +1,20 @@
+# Specify the base image
 FROM node:16
 
-# make the 'app' folder the current working directory
-WORKDIR /app
+# Set the working directory inside the container to /WebApp
+WORKDIR /WebApp
 
-# copy both 'package.json' and 'package-lock.json' (if available)
-COPY package*.json ./
+# Copy package.json and package-lock.json (if available) into the container
+COPY package*.json .
 
-# install project dependencies
+# Install project dependencies
 RUN npm install
 
-# copy project files and folders to the current working directory (i.e. 'app' folder)
-COPY /public ./public
-COPY /src ./src
+# Copy project files and folders into the container's working directory (/WebApp)
+COPY . .
 
-# start app
+# Expose port 8081 to allow external access to the application
+EXPOSE 8081
+
+# Define the command to be executed when the container starts
 CMD ["npm", "run", "serve"]

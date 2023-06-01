@@ -45,7 +45,7 @@
         </div>
         <div>
           <label><strong>Post:</strong></label>
-          {{ currentPost.post }}
+          {{ currentPost.textPost }}
         </div>
 
         <router-link

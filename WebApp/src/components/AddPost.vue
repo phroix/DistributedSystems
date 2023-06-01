@@ -14,13 +14,13 @@
       </div>
 
       <div class="form-group">
-        <label for="post">Post</label>
+        <label for="textPost">Post</label>
         <input
           class="form-control"
-          id="post"
+          id="textPost"
           required
-          v-model="post.post"
-          name="post"
+          v-model="post.textPost"
+          name="textPost"
         />
       </div>
 
@@ -44,7 +44,7 @@ export default {
       post: {
         id: null,
         name: "",
-        post: "",
+        textPost: "",
       },
       submitted: false,
     };
@@ -53,7 +53,7 @@ export default {
     savePost() {
       var data = {
         name: this.post.name,
-        post: this.post.post,
+        textPost: this.post.textPost,
       };
 
       PostDataService.create(data)
