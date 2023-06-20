@@ -28,4 +28,4 @@ Backend in Backend folder
 Start Backend with Spring Boot Dashboard "Distributed Systems" or with mvn spring-boot:run command
 
 ##Docker
-Start the container with docker-compose up
+Start the container with docker compose up
